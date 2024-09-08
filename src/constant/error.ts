@@ -1,0 +1,8 @@
+export enum ERROR {
+  INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR', // 알 수 없는 서버 에러
+  DUPLICATION = 'DUPLICATION', // 중복 작성
+  NOT_EXIST_DATA = 'NOT_EXIST_DATA', // 해당 데이터 없음
+  USER_NOT_FOUND = 'USER_NOT_FOUND', // 유저 데이터 없음
+  FORBIDDEN = 'FORBIDDEN', // 권한 없음
+  FILE_LOCK_FAILED = 'FILE_LOCK_FAILED',
+}
