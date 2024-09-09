@@ -1,85 +1,87 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# 파일 기반 데이터베이스 API 프로젝트
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 프로젝트 설명 (Description)
 
-## Description
+이 프로젝트는 **NestJS**, **TypeScript**, **Swagger**, **Axios**, 그리고 **node-json-db**를 활용하여 파일 기반 데이터베이스를 관리하는 RESTful API입니다. 파일에 데이터를 저장하고 조회하는 기능을 제공합니다. 또한, **Swagger**를 통해 API 문서를 자동 생성하고, **Axios**를 사용하여 외부 API와 통신하는 기능을 구현했습니다.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 주요 기능 (Features)
 
-## Project setup
+- 파일 기반 데이터 저장 및 조회 (`node-json-db`)
+- **NestJS**를 사용한 서버 프레임워크
+- **Swagger**를 통한 API 문서화
+- **Axios**를 통한 외부 API 통신
+- **Jest**로 유닛 테스트
 
-```bash
+## 제약 사항 (Constraints)
+
+- **TypeScript**로 작성
+- **node-json-db** 사용
+- **NestJS** 서버 프레임워크 사용
+- **Axios** 통신 라이브러리 사용
+- **Jest** 테스트 라이브러리 사용
+
+## 설치 방법 (Installation)
+
+\`\`\`bash
+# 패키지 설치
 $ yarn install
-```
+\`\`\`
 
-## Compile and run the project
+## 프로젝트 실행 (Running the Project)
 
-```bash
-# development
+\`\`\`bash
+# 개발 모드
 $ yarn run start
 
-# watch mode
+# 자동 감지 모드 (watch mode)
 $ yarn run start:dev
 
-# production mode
+# 프로덕션 모드
 $ yarn run start:prod
-```
+\`\`\`
 
-## Run tests
+## API 문서 확인 (API Documentation)
 
-```bash
-# unit tests
+\`\`\`bash
+# 프로젝트 실행 후, 브라우저에서 Swagger UI를 확인하세요.
+http://localhost:3000/api
+\`\`\`
+
+## 테스트 실행 (Running Tests)
+
+\`\`\`bash
+# 유닛 테스트
 $ yarn run test
 
-# e2e tests
+# e2e 테스트
 $ yarn run test:e2e
 
-# test coverage
+# 테스트 커버리지
 $ yarn run test:cov
-```
+\`\`\`
 
-## Resources
+## 파일 구조 (Project Structure)
 
-Check out a few resources that may come in handy when working with NestJS:
+\`\`\`
+📂 프로젝트 루트
+ ┣ 📂 src              # 소스 코드
+ ┃ ┣ 📂 modules        # 각 모듈별 코드
+ ┃ ┗ 📜 main.ts        # 앱 엔트리 포인트
+ ┣ 📂 test             # 테스트 코드
+ ┣ 📜 README.md        # 이 파일!
+ ┣ 📜 package.json     # 프로젝트 설정 파일
+ ┗ 📜 tsconfig.json    # TypeScript 설정 파일
+\`\`\`
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## 참고 자료 (Resources)
 
-## Support
+NestJS와 관련된 더 많은 정보는 아래 링크들을 참고하세요:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- [NestJS 공식 문서](https://docs.nestjs.com)
+- [NestJS Swagger](https://docs.nestjs.com/openapi/introduction)
+- [Axios 공식 문서](https://axios-http.com/docs/intro)
 
-## Stay in touch
+## 라이센스 (License)
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+이 프로젝트는 [MIT 라이센스](https://opensource.org/licenses/MIT)를 따릅니다.
