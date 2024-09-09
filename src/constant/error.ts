@@ -4,5 +4,6 @@ export enum ERROR {
   NOT_EXIST_DATA = 'NOT_EXIST_DATA', // 해당 데이터 없음
   USER_NOT_FOUND = 'USER_NOT_FOUND', // 유저 데이터 없음
   FORBIDDEN = 'FORBIDDEN', // 권한 없음
-  FILE_LOCK_FAILED = 'FILE_LOCK_FAILED',
+  FILE_LOCK_FAILED = 'FILE_LOCK_FAILED', // 파일 Lock
+  EXTERNAL_API_ERROR = 'EXTERNAL_API_ERROR', // 외부 API 호출 실패
 }

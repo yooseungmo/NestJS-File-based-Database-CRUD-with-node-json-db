@@ -1,5 +1,6 @@
 import { InternalServerErrorException } from "@nestjs/common";
 import axios from "axios";
+import { ERROR } from "src/constant/error";
 
 export class ExternalService {
   async fetchExternalData(): Promise<any> {
@@ -10,10 +11,10 @@ export class ExternalService {
       if (axios.isAxiosError(e)) {
         // axios 에러인 경우 처리
         const errorMessage = e.response?.data?.message || e.message;
-        throw new InternalServerErrorException(`외부 API 호출 실패: ${errorMessage}`);
+        throw new InternalServerErrorException(ERROR.EXTERNAL_API_ERROR);
       } else {
         // 일반 에러 처리
-        throw new InternalServerErrorException('알 수 없는 에러 발생');
+        throw new InternalServerErrorException(ERROR.INTERNAL_SERVER_ERROR)
       }
     }
   }
