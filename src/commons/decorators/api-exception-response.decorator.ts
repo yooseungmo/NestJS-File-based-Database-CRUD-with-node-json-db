@@ -1,6 +1,6 @@
 import { ApiResponse, ApiResponseOptions } from '@nestjs/swagger';
 import { applyDecorators, HttpStatus } from '@nestjs/common';
-import { ERROR } from 'src/constant/error';
+import { ERROR } from '../../constant/error'
 
 
 export const ApiExceptionResponse = (error: ERROR[], options?: ApiResponseOptions) => {

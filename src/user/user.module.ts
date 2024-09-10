@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { FileManager } from 'src/utils/file-manager';
+import { FileManager } from "../utils/file-manager";
 import { ExternalService } from './external.service';
 import { UserController } from './user.controller';
 import { UserRepository } from './user.repository';

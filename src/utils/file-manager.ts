@@ -1,6 +1,6 @@
 import { Config, JsonDB } from "node-json-db";
 import * as fsExtra from 'fs-extra';
-import { ERROR } from "src/constant/error";
+import { ERROR } from '../constant/error'
 import { ConflictException, Injectable, NotFoundException } from "@nestjs/common";
 
 

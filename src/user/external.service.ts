@@ -1,6 +1,6 @@
 import { InternalServerErrorException } from "@nestjs/common";
 import axios from "axios";
-import { ERROR } from "src/constant/error";
+import { ERROR } from '../constant/error'
 
 export class ExternalService {
   async fetchExternalData(): Promise<any> {

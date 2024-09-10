@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { ERROR } from "src/constant/error";
-import { FileManager } from "src/utils/file-manager";
+import { ERROR } from '../constant/error'
+import { FileManager } from "../utils/file-manager";
 import { Post } from "./interfaces/post.interface";
 import { User } from "./interfaces/user.interface";
 import { ApiUserPostRequestBodyDto } from "./dto/api-user-post-request-body.dto";
@@ -34,6 +34,9 @@ export class UserRepository {
     console.log(typeof userId)
     if (!user) {
       throw new NotFoundException(ERROR.USER_NOT_FOUND)
+    }
+    if (!user.posts) {
+      user.posts = []; // JEST 로 잡음
     }
     const newPost: Post = {
       postId: user.posts.length ? user.posts[user.posts.length - 1].postId + 1 : 1,

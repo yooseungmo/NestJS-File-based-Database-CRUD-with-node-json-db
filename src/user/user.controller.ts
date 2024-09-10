@@ -3,8 +3,8 @@ import { ExternalService } from './external.service';
 import { UserService } from './user.service';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { ApiUserPostRequestBodyDto } from './dto/api-user-post-request-body.dto';
-import { ERROR } from 'src/constant/error';
-import { ApiExceptionResponse } from 'src/commons/decorators/api-exception-response.decorator';
+import { ERROR } from '../constant/error'
+import { ApiExceptionResponse } from '../commons/decorators/api-exception-response.decorator';
 
 @Controller('users')
 export class UserController {
