@@ -3,6 +3,7 @@ import { ERROR } from "src/constant/error";
 import { FileManager } from "src/utils/file-manager";
 import { Post } from "./interfaces/post.interface";
 import { User } from "./interfaces/user.interface";
+import { ApiUserPostRequestBodyDto } from "./dto/api-user-post-request-body.dto";
 
 @Injectable()
 export class UserRepository {
@@ -15,11 +16,11 @@ export class UserRepository {
     return Array.isArray(users) ? users : [];  // 배열인지 확인하고, 아니면 빈 배열 반환
   }
 
-  async createUser(name: string): Promise<User> {
+  async createUser(dto:ApiUserPostRequestBodyDto): Promise<User> {
     const users = await this.getAllUsers();
     const newUser: User = {
       id: users.length ? users[users.length - 1].id + 1 : 1,
-      name,
+      name: dto.name,
       posts: []
     };
     users.push(newUser);

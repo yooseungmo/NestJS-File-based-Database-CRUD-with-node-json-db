@@ -21,10 +21,7 @@ async function bootstrap() {
       {
         extraModels: SwaggerModels, // 추가로 정의된 Swagger 모델을 포함시키기 위한 옵션 (추가 모델이 있을 때 사용)
       },
-    ),
-    {
-      // swaggerOptions: { defaultModelsExpandDepth: -1 }, // Swagger UI에서 모델의 기본 확장 깊이를 설정 (여기서는 모든 모델을 기본적으로 축소)
-    },
+    )
   );
 
   await app.listen(3000);
