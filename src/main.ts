@@ -2,10 +2,14 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { SwaggerModels } from './swagger';
+import { UnifiedExceptionFilter } from './common/filters/unified-http-exception.filter';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    logger: ['log', 'error', 'warn'], // 로그 레벨 설정
+  });
 
+  app.useGlobalFilters(new UnifiedExceptionFilter());
 
   SwaggerModule.setup(
     'docs', // Swagger 문서를 볼 수 있는 URL 경로 (http://localhost:3000/docs)
